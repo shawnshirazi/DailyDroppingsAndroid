@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="15dp"
+    tools:context=".EventEditActivity">
+
+    <ScrollView
+        android:id="@+id/vert"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true"
+        android:measureAllChildren="false"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/addPoop"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_marginRight="150dp"
+                android:background="@drawable/layout_bg"
+                android:backgroundTint="@color/brown"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feeling"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:textColor="@color/white"
+                    android:background="@null"
+                    android:textStyle="bold"
+                    android:clickable="false"
+                    android:textSize="20dp"/>
+
+
+            </LinearLayout>
+
+
+            <co.ceryle.radiorealbutton.RadioRealButtonGroup
+                android:id="@+id/feelingRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:minHeight="48dp"
+                app:rrbg_animate="true"
+                app:rrbg_animateSelector="2"
+                app:rrbg_animateSelector_duration="100"
+                app:rrbg_animateTexts_enter="overshoot"
+                app:rrbg_dividerColor="#4a4a4a"
+                app:rrbg_dividerSize="1dp"
+                app:rrbg_radius="10dp"
+                app:rrbg_selectorColor="#bababa"
+                app:rrbg_selectorSize="4dp">
+
+                <co.ceryle.radiorealbutton.RadioRealButton
+                    android:id="@+id/amazingFeeling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:rrb_ripple="true"
+                    app:rrb_rippleColor="@color/black"
+                    app:rrb_text="Amazing"
+                    app:rrb_textColor="@color/black"
+                    app:rrb_textSize="12dp" />
+
+                <co.ceryle.radiorealbutton.RadioRealButton
+                    android:id="@+id/goodFeeling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:rrb_ripple="true"
+                    app:rrb_rippleColor="@color/black"
+                    app:rrb_text="Good"
+                    app:rrb_textColor="@color/black"
+                    app:rrb_textSize="12dp" />
+
+                <co.ceryle.radiorealbutton.RadioRealButton
+                    android:id="@+id/neutralFeeling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:rrb_ripple="true"
+                    app:rrb_rippleColor="@color/black"
+                    app:rrb_checked="true"
+                    app:rrb_text="Neutral"
+                    app:rrb_textColor="@color/black"
+                    app:rrb_textSize="12dp" />
+
+                <co.ceryle.radiorealbutton.RadioRealButton
+                    android:id="@+id/badFeeling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:rrb_ripple="true"
+                    app:rrb_rippleColor="@color/black"
+                    app:rrb_text="Bad"
+                    app:rrb_textColor="@color/black"
+                    app:rrb_textSize="12dp" />
+
+                <co.ceryle.radiorealbutton.RadioRealButton
+                    android:id="@+id/painfulFeeling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:rrb_ripple="true"
+                    app:rrb_rippleColor="@color/black"
+                    app:rrb_text="Painful"
+                    app:rrb_textColor="@color/black"
+                    app:rrb_textSize="12dp" />
+
+
+            </co.ceryle.radiorealbutton.RadioRealButtonGroup>
+
+            <LinearLayout
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_marginRight="150dp"
+                android:background="@drawable/layout_bg"
+                android:backgroundTint="@color/brown"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Poop Color"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:textColor="@color/white"
+                    android:background="@null"
+                    android:textStyle="bold"
+                    android:clickable="false"
+                    android:textSize="20dp"/>
+
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/poopColorRadioGroup"
+                android:layout_marginLeft="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/color_green"
+                    android:layout_margin="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle_shapegreen"
+                    android:buttonTint="@color/blue"
+                    android:minHeight="48dp"
+                    android:button="@drawable/radio"
+                    android:padding="16dp"
+                 />
+
+                <RadioButton
+                    android:id="@+id/color_yellow"
+                    android:layout_margin="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio"
+                    android:buttonTint="@color/blue"
+                    android:background="@drawable/circle_shapeyellow"
+                    android:minHeight="48dp"
+                    android:padding="16dp"
+                />
+
+                <RadioButton
+                    android:id="@+id/color_red"
+                    android:layout_margin="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio"
+                    android:buttonTint="@color/blue"
+                    android:background="@drawable/circle_shapered"
+                    android:minHeight="48dp"
+                    android:padding="16dp"
+                 />
+
+                <RadioButton
+                    android:id="@+id/color_brown"
+                    android:layout_margin="6dp"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio"
+                    android:buttonTint="@color/blue"
+                    android:background="@drawable/circle_shapebrown"
+                    android:minHeight="48dp"
+                    android:padding="16dp"
+                 />
+
+                <RadioButton
+                    android:id="@+id/color_black"
+                    android:layout_margin="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle_shapeblack"
+                    android:button="@drawable/radio"
+                    android:buttonTint="@color/blue"
+                    android:minHeight="48dp"
+                />
+
+                <RadioButton
+                    android:id="@+id/color_white"
+                    android:layout_margin="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio"
+                    android:buttonTint="@color/blue"
+                    android:background="@drawable/circle_shapewhite"
+                    android:minHeight="48dp"
+                    android:padding="16dp"
+                 />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_marginRight="150dp"
+                android:background="@drawable/layout_bg"
+                android:backgroundTint="@color/brown"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Poop Type"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:textColor="@color/white"
+                    android:background="@null"
+                    android:textStyle="bold"
+                    android:clickable="false"
+                    android:textSize="20dp"/>
+
+
+            </LinearLayout>
+
+
+
+            <HorizontalScrollView
+                android:id="@+id/hsv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:fillViewport="true"
+                android:measureAllChildren="false"
+                android:scrollbars="none" >
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="100dp"
+                            android:maxHeight="100dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/type1" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="100dp"
+                            android:maxHeight="100dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="12dp"
+                            android:src="@drawable/type2"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="12dp"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="100dp"
+                            android:maxHeight="100dp"
+                            android:src="@drawable/type3" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="100dp"
+                            android:maxHeight="100dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="12dp"
+                            android:src="@drawable/type4"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="100dp"
+                            android:maxHeight="100dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="12dp"
+                            android:src="@drawable/type5"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="100dp"
+                            android:maxHeight="100dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/type6"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="100dp"
+                            android:maxHeight="100dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/type7"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:text="Type 1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:text="Type 2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:text="Type 3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:text="Type 4" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:text="Type 5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:text="Type 6" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:text="Type 7" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/poopTypeRadioGroup"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:paddingBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <RadioButton
+                                android:id="@+id/poopType_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:checked="true"
+                                android:padding="20dp"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/poopType_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="20dp"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/poopType_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="20dp"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/poopType_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="20dp"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/poopType_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="20dp"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/poopType_6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="20dp"
+                                />
+
+
+                            <RadioButton
+                                android:id="@+id/poopType_7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="20dp"
+                                />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+            <LinearLayout
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_marginRight="150dp"
+                android:background="@drawable/layout_bg"
+                android:backgroundTint="@color/brown"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Duration"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/white"
+                    android:background="@null"
+                    android:textStyle="bold"
+                    android:clickable="false"
+                    android:textSize="20dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <SeekBar
+                    android:paddingTop="15dp"
+                    android:id="@+id/seekBar"
+                    android:max="60"
+                    android:progress="0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/layout_bg"
+                    android:backgroundTint="@color/brown"
+                    android:textStyle="bold"
+                    android:clickable="false"
+                    android:textSize="20dp"/>
+
+
+                <EditText
+                    android:layout_marginLeft="150dp"
+                    android:id="@+id/editTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Select Time" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="15dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/doneButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginRight="150dp"
+                    android:text="Done"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/layout_bg"
+                    android:backgroundTint="@color/brown"
+                    android:textStyle="bold"
+                    android:clickable="false"
+                    android:textSize="20dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
